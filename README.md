@@ -74,6 +74,12 @@ UwU uses ```UnityEngine.GUI```, ```UnityEngine.GUILayout```, ```UnityEditor.Edit
 ```
 ![Image of some buttons affecting a progress bar](buttonprogressbarlayout.gif)
 
+#### Dad joke
+
+```cs
+    Funny.dadJoke()
+```
+
  ## Q&A
 `How do I use UwU?`
 
@@ -101,6 +107,16 @@ Although UwU already features a lot of GUI methods it is still missing a few fea
 
 There's also some bugs that are known but have not been fixed yet:
  - Functions called from buttons can't change script variables
+ - Because of the limitations that come with using attributes, Gui that takes up more than "one line" in your gui will not stretch. Aka labels, helpboxes et cetera are not content aware.
 
 ## Credit
-Though the largest part of this code was written by me the inspiration for this project was (if you hadn't guessed) [EasyButtons](https://github.com/madsbangh/EasyButtons) by [Mads Bang Hoffensetz](https://github.com/madsbangh).
+Though the largest part of this code was written by me the inspiration for this project was (if you hadn't guessed) [EasyButtons](https://github.com/madsbangh/EasyButtons) by [Mads Bang Hoffensetz](https://github.com/madsbangh) (@madsbangh).
+
+The dad joke generator relies on [this](https://icanhazdadjoke.com/) api.
+
+## Last but not least...
+UwU already supports quite a few GUI methods but if there's a feature you would like to see in the next version feel free to open an issue.
+
+If you encounter any significant bugs please also open an Issue.
+
+If you know how to fix one of the known bugs please create a pull request or contact me.
