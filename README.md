@@ -90,3 +90,17 @@ No, although UwU is super easy to use it, because of the limitations of attribut
 `Is UwU build safe?`
 
 Yes! This is actually another benefit of using UwU over your own custom inspectors. You won't have to put scripts that use UwU in an `Editor` folder or use ```#if UNITY_EDITOR``` on anything that uses UwU. 
+
+## Features yet to be added
+Although UwU already features a lot of GUI methods it is still missing a few features:
+ - The [DropDownButton](https://docs.unity3d.com/ScriptReference/EditorGUI.DropdownButton.html)
+ - The [FoldoutHeaderGroup](https://docs.unity3d.com/ScriptReference/EditorGUI.BeginFoldoutHeaderGroup.html)
+ - The [InspectorTitleBar](https://docs.unity3d.com/ScriptReference/EditorGUI.InspectorTitlebar.html)
+ - The [PreviewTexture](https://docs.unity3d.com/ScriptReference/EditorGUI.DrawPreviewTexture.html)
+ - Support for GUILayout.HorizontalLayoutGroup (instead of EditorGUILayout.HorizontalLayoutGroup)
+
+There's also some bugs that are known but have not been fixed yet:
+ - Functions called from buttons can't change script variables
+
+## Credit
+Though the largest part of this code was written by me the inspiration for this project was (if you hadn't guessed) [EasyButtons](https://github.com/madsbangh/EasyButtons) by [Mads Bang Hoffensetz](https://github.com/madsbangh).
