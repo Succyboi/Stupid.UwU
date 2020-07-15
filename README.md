@@ -1,5 +1,5 @@
-# Stupid.UwU [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat)](LICENSE)
-`Oh to feel beautiful...`
+# Stupid.UwU [![License](https://img.shields.io/badge/license-MIT-orange.svg?style=flat)](LICENSE) [![http://stupidplusplus.com](https://img.shields.io/badge/Contact%20me-Here-lightgrey)](http://stupidplusplus.com)
+`Making GUI as easy as [Header()]!`
 
 
 
@@ -18,20 +18,61 @@ UwU uses something called Attributes. Perhaps you've used one before in the form
 ## Features
 UwU uses ```UnityEngine.GUI```, ```UnityEngine.GUILayout```, ```UnityEditor.EditorGUI```, ```UnityEditor.EditorGUILayout``` and attempts to feature the most useful of their methods. The following methods are supported:
 
- - Seperating lines
- - Labels
+ - Seperating lines➖
+ - Labels🔖
  - Titles (Same as ```[Header("")]``` but with more options)
- - Dropdowns
- - HelpBoxes
- - SetActive (Basically ```[HideInInspector]``` but dependant on a boolean in your script)
- - Foldouts
- - Progress bars
- - Horizontal and Vertical groups
- - Buttons (And yes they can actually call functions)
- - A lorum ipsum generator and a dad joke generator
- - Some other tomfoolery
+ - Dropdowns🔽
+ - HelpBoxes⬜
+ - SetActives (Basically ```[HideInInspector]``` but dependant on a boolean in your script)
+ - Foldouts🔽
+ - Progress bars [█░░░ 25%]
+ - Horizontal and Vertical groups 
+ - Buttons (And yes they can actually call functions) 🔴
+ - A lorum ipsum generator and a dad joke generator 👨🏻
+ - Some other tomfoolery...
 
  ## Examples
+#### Dropdown
+```cs
+    [Dropdown(new object[] { "Option 1", "Option 2", "Option 3", "Option 4", "Option 5" })]
+    public string DropDown0 = "Option 1";
+```
+![Image of a working dropdown](dropdown.png)
+
+#### HelpBox
+```cs
+    [HelpBox]
+    public string helpbox1 = "Hey I'm a helpbox";
+    [HelpBox(1, MessageType.Info)]
+    public string helpbox2 = "I can show messages...";
+    [HelpBox(1, MessageType.Warning)]
+    public string helpbox3 = "Warnings...";
+    [HelpBox(1, MessageType.Error)]
+    public string helpbox4 = "And errors!";
+```
+![Image of a helpbox](helpbox.png)
+
+#### Foldout and Setactive
+```cs
+    [FoldOut]
+    public bool toggleMe = false;
+
+    [SetActive("toggleMe"), HelpBox(1, MessageType.Error)]
+    public string shrug = Funny.shrug;
+```
+![Image of a working foldout connected to setactive](foldoutsetactive.gif)
+
+#### Button, Progressbar and Horizontal layout group
+```cs
+    [BeginHorizontal, Button("One")]
+    public bool one;
+    [EndHorizontal, Button("Two")]
+    public bool two;
+
+    [ProgressBar(0, 100)]
+    public float progress;
+```
+![Image of some buttons affecting a progress bar](buttonprogressbarlayout.gif)
 
  ## Q&A
 `How do I use UwU?`
@@ -45,3 +86,7 @@ No, UwU does not affect in-editor performance. However because we're using attri
 `Does UwU completely replace custom editors?`
 
 No, although UwU is super easy to use it, because of the limitations of attributes, lacks in complexity. Once there is a demand for more complex custom inspectors UwU starts to become a less preferable alternative to writing your own custom inspector.
+
+`Is UwU build safe?`
+
+Yes! This is actually another benefit of using UwU over your own custom inspectors. You won't have to put scripts that use UwU in an `Editor` folder or use ```#if UNITY_EDITOR``` on anything that uses UwU. 
