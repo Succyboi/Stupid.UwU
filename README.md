@@ -81,11 +81,11 @@ Simply download the unity package from the releases tab or copy the sourcecode d
 
 `Does UwU affect in-editor performance?`
 
-No, UwU does not affect in-editor performance. However because we're using attributes and attributes need to be compiled along with the script, the compile time may be slightly longer however this effect will only become noticable when you use +30 or so attributes.
+No. UwU does not affect in-editor performance. However because we're using attributes and attributes need to be compiled along with the script, the compile time may be slightly longer however this effect will only become noticable when you use +30 or so attributes.
 
 `Does UwU completely replace custom editors?`
 
-No, although UwU is super easy to use it, because of the limitations of attributes, lacks in complexity. Once there is a demand for more complex custom inspectors UwU starts to become a less preferable alternative to writing your own custom inspector.
+No. Although UwU is super easy to use it, because of the limitations of attributes, lacks in complexity. Once there is a demand for more complex custom inspectors UwU starts to become a less preferable alternative to writing your own custom inspector.
 
 `Is UwU build safe?`
 
